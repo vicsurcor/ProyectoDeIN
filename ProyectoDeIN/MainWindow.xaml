@@ -5,8 +5,304 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoDeIN"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="720" Width="1080" BorderBrush="#066">
+    
+    <Window.Resources>
+
+        <Style x:Key="BotonSocial" TargetType="Button">
+
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="Width" Value="22"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="#F7F0F0"/>
+
+        </Style>
+        <Style x:Key="GridContent" TargetType="Grid">
+
+            <Setter Property="Panel.ZIndex" Value="-1"/>
+            <Setter Property="Background" Value="#F7F0F0"/>
+            <Setter Property="Margin" Value="0,2,0,0"/>
+
+
+        </Style>
+        <Style x:Key="Usuario" TargetType="Border">
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="CornerRadius" Value="0,20,20,0"/>
+
+        </Style>
+        <Style x:Key="BotonUsuario" TargetType="Button">
+
+            <Setter Property="Height" Value="24"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+            <Setter Property="Background" Value="#F7F0F0"/>
+
+
+        </Style>
+        <Style x:Key="BotonContenido" TargetType="Button">
+
+            <Setter Property="Grid.Column" Value="2" />
+            <Setter Property="Background" Value="#F7F0F0" />
+            <Setter Property="Height" Value="35" />
+            <Setter Property="Width" Value="35" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="BorderThickness" Value="0,0,0,0" />
+            <Setter Property="Margin" Value="0,2,2,0" />
+            
+
+        </Style>
+        <Style x:Key="TextoContenido1" TargetType="TextBox">
+
+            <Setter Property="Background" Value="#F7F0F0" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="7,10,0,0" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+            <Setter Property="BorderThickness" Value="0,0,0,2" />
+            <Setter Property="IsReadOnly" Value="True"/>
+
+        </Style>
+        <Style x:Key="TextoContenido2" TargetType="TextBox">
+
+            <Setter Property="Background" Value="#F7F0F0" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="7,30,0,0" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="IsReadOnly" Value="True"/>
+
+        </Style>
+        <Style x:Key="Contenido" TargetType="WrapPanel">
+
+            <Setter Property="Effect">
+
+                <Setter.Value>
+
+                    <DropShadowEffect ShadowDepth="4"/>
+
+                </Setter.Value>
+
+            </Setter>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Margin" Value="5,5,5,5"/>
+
+        </Style>
+
+    </Window.Resources>
+
+    <Grid Background="Black">
         
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="2*"/>
+
+            <ColumnDefinition Width="7*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="7*"/>
+
+            <RowDefinition Height="0.8*"/>
+
+        </Grid.RowDefinitions>
+
+
+
+        <Grid Background="AntiqueWhite" Margin="0,0,2,0" HorizontalAlignment="Right" Width="236">
+
+            <Button Style="{StaticResource BotonSocial}">
+                <Image Source="/Recursos/boton1.png"></Image>
+            </Button>
+
+
+        </Grid>
+
+        <Grid Grid.Row="2" Panel.ZIndex="1">
+
+            <Border Style="{StaticResource Usuario}" Margin="0,0,-17,0">
+                <Button Style="{StaticResource BotonUsuario}">
+                    <Image Source="/Recursos/boton2.png" Stretch="Fill"></Image>
+                    
+                </Button>
+            </Border>
+
+        </Grid>
+
+        <Grid Grid.Column="2" Grid.RowSpan="2" Panel.ZIndex="-1">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="1*"/>
+
+                <RowDefinition Height="1*"/>
+
+                <RowDefinition Height="1*"/>
+
+                <RowDefinition Height="1*"/>
+
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+
+            <Grid Style="{StaticResource GridContent}">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+
+
+                </Grid.ColumnDefinitions>
+
+                <WrapPanel Style="{StaticResource Contenido}"></WrapPanel>
+
+                <Grid Grid.Column="1">
+
+                    <TextBox Style="{StaticResource TextoContenido1}">Contenido
+                    </TextBox>
+                    <TextBox Style="{StaticResource TextoContenido2}">Descripcion
+                    </TextBox>
+
+                </Grid>
+
+                <Button Style="{StaticResource BotonContenido}">
+                    <Image Source="/Recursos/boton3.png"></Image>
+                </Button>
+
+
+            </Grid>
+            <Grid Grid.Row="1" Style="{StaticResource GridContent}">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+
+
+                </Grid.ColumnDefinitions>
+
+                <WrapPanel Style="{StaticResource Contenido}"></WrapPanel>
+                <Grid Grid.Column="1">
+
+                    <TextBox Style="{StaticResource TextoContenido1}">Contenido
+                    </TextBox>
+                    <TextBox Style="{StaticResource TextoContenido2}">Descripcion
+                    </TextBox>
+
+                </Grid>
+                <Button Style="{StaticResource BotonContenido}">
+                    <Image Source="/Recursos/boton3.png"></Image>
+                </Button>
+
+
+            </Grid>
+            <Grid Grid.Row="2" Style="{StaticResource GridContent}">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+
+
+                </Grid.ColumnDefinitions>
+
+                <WrapPanel Style="{StaticResource Contenido}"></WrapPanel>
+
+                <Grid Grid.Column="1">
+
+                    <TextBox Style="{StaticResource TextoContenido1}">Contenido
+                    </TextBox>
+                    <TextBox Style="{StaticResource TextoContenido2}">Descripcion
+                    </TextBox>
+
+                </Grid>
+
+                <Button Style="{StaticResource BotonContenido}">
+                    <Image Source="/Recursos/boton3.png"></Image>
+                </Button>
+
+            </Grid>
+            <Grid Grid.Row="3" Style="{StaticResource GridContent}">
+                
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+
+
+                </Grid.ColumnDefinitions>
+
+                <WrapPanel Style="{StaticResource Contenido}"></WrapPanel>
+
+                <Grid Grid.Column="1">
+
+                    <TextBox Style="{StaticResource TextoContenido1}">Contenido
+                    </TextBox>
+                    <TextBox Style="{StaticResource TextoContenido2}">Descripcion
+                    </TextBox>
+
+                </Grid>
+
+                <Button Style="{StaticResource BotonContenido}">
+                    
+                    <Image Source="/Recursos/boton3.png"></Image>
+                    
+                </Button>
+
+
+            </Grid>
+            <Grid Grid.Row="4" Style="{StaticResource GridContent}">
+                
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+
+
+                </Grid.ColumnDefinitions>
+
+                <WrapPanel Style="{StaticResource Contenido}"/>
+
+
+
+                <Grid Grid.Column="1">
+
+                    <TextBox Style="{StaticResource TextoContenido1}">Contenido
+                    </TextBox>
+                    <TextBox Style="{StaticResource TextoContenido2}">Descripcion
+                    </TextBox>
+
+                </Grid>
+
+                <Button Style="{StaticResource BotonContenido}">
+                    
+                     <Image Source="/Recursos/boton3.png"></Image>
+                    
+                </Button>
+
+
+            </Grid>
+
+        </Grid>
+
     </Grid>
 </Window>
