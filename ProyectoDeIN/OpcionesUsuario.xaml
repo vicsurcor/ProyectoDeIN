@@ -1,0 +1,57 @@
+﻿<Window x:Class="ProyectoDeIN.OpcionesUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoDeIN"
+        mc:Ignorable="d"
+        Title="OpcionesUsuario" Height="100" Width="100">
+    <Window.Resources>
+
+        <Style x:Key="UsuarioAjustes" TargetType="TextBlock">
+
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Margin" Value="0"/>
+
+
+        </Style>
+        <Style x:Key="BotonUsuarioAjustes" TargetType="Button">
+
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="#F7F0F0"/>
+
+        </Style>
+        
+    </Window.Resources>
+    <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Style="{StaticResource BotonUsuarioAjustes}">
+
+            <TextBlock x:Name="Perfil" Style="{StaticResource UsuarioAjustes}">Perfil</TextBlock>
+         
+        </Button>
+        <Button Grid.Row="1" Style="{StaticResource BotonUsuarioAjustes}">
+            
+            <TextBlock x:Name="Ajustes" Grid.Row="1" Style="{StaticResource UsuarioAjustes}">Ajustes</TextBlock>
+            
+        </Button>
+        <Button Grid.Row="2" Style="{StaticResource BotonUsuarioAjustes}">
+            
+            <TextBlock x:Name="CambioDeEstado" Grid.Row="2" Style="{StaticResource UsuarioAjustes}">Cambiar el Estado</TextBlock>
+            
+        </Button>
+
+
+    </Grid>
+</Window>

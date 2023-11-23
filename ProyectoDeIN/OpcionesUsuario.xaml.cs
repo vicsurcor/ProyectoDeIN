@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ProyectoDeIN
 {
     /// <summary>
-    /// Lógica de interacción para Window1.xaml
+    /// Lógica de interacción para OpcionesUsuario.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class OpcionesUsuario : Window
     {
-        public Window1()
+        public OpcionesUsuario()
         {
             InitializeComponent();
         }

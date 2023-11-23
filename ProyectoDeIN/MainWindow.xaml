@@ -122,9 +122,9 @@
 
 
 
-        <Grid Background="AntiqueWhite" Margin="0,0,2,0" HorizontalAlignment="Right" Width="236">
+        <Grid x:Name="BackgroundGrid" Background="AntiqueWhite" Margin="0,0,2,0" HorizontalAlignment="Right" Width="236">
 
-            <Button Style="{StaticResource BotonSocial}">
+            <Button x:Name="BotonSocial" Style="{StaticResource BotonSocial}" Click="BotonSocial_Click">
                 <Image Source="/Recursos/boton1.png"></Image>
             </Button>
 
@@ -133,11 +133,15 @@
 
         <Grid Grid.Row="2" Panel.ZIndex="1">
 
-            <Border Style="{StaticResource Usuario}" Margin="0,0,-17,0">
-                <Button Style="{StaticResource BotonUsuario}">
-                    <Image Source="/Recursos/boton2.png" Stretch="Fill"></Image>
+            <Border Style="{StaticResource Usuario}" Margin="0,0,-12,0" >
+
+                <Grid Panel.ZIndex="1">
                     
-                </Button>
+                    <Button x:Name="BotonUsuario" Style="{StaticResource BotonUsuario}" Click="BotonUsuario_Click">
+                        <Image Source="/Recursos/boton2.png" Stretch="Fill"></Image>
+                    </Button>
+                    
+                </Grid>
             </Border>
 
         </Grid>
@@ -169,7 +173,9 @@
 
                 </Grid.ColumnDefinitions>
 
-                <WrapPanel Style="{StaticResource Contenido}"></WrapPanel>
+                <WrapPanel Style="{StaticResource Contenido}">
+                    
+                </WrapPanel>
 
                 <Grid Grid.Column="1">
 
