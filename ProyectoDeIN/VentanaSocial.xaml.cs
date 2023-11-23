@@ -26,8 +26,7 @@ namespace ProyectoDeIN
 
         private void WindowSocial_MouseLeave(object sender, MouseEventArgs e)
         {
-            VentanaSocial window1 = sender as VentanaSocial;
-            window1.Close();
+            this.Close();
         }
 
         private void CambioTexto_Social(object sender, TextChangedEventArgs e)

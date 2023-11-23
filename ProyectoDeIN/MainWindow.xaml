@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoDeIN"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1080" BorderBrush="#066">
-    
+        Title="MainWindow" Height="720" Width="1080" BorderBrush="#066" x:Name="Principal">
+
     <Window.Resources>
 
         <Style x:Key="BotonSocial" TargetType="Button">
@@ -56,7 +56,7 @@
             <Setter Property="BorderBrush" Value="Black" />
             <Setter Property="BorderThickness" Value="0,0,0,0" />
             <Setter Property="Margin" Value="0,2,2,0" />
-            
+
 
         </Style>
         <Style x:Key="TextoContenido1" TargetType="TextBox">
@@ -99,11 +99,36 @@
             <Setter Property="Margin" Value="5,5,5,5"/>
 
         </Style>
+        <Style x:Key="BorderUsuario" TargetType="Border">
+
+            <Setter Property="Height" Value="60" />
+            <Setter Property="Width" Value="60" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="Background" Value="Black" />
+            <Setter Property="CornerRadius" Value="100" />
+            <Setter Property="Grid.Column" Value="0" />
+
+
+        </Style>
+        <Style x:Key="BorderUsuarioEstado" TargetType="Border">
+
+            <Setter Property="Height" Value="20" />
+            <Setter Property="Width" Value="20" />
+            <Setter Property="Margin" Value="40,40,0,0" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="Background" Value="#31F82D" />
+            <Setter Property="CornerRadius" Value="100" />
+            <Setter Property="Grid.Column" Value="0" />
+
+
+        </Style>
 
     </Window.Resources>
 
     <Grid Background="Black">
-        
+
         <Grid.ColumnDefinitions>
 
             <ColumnDefinition Width="2*"/>
@@ -136,11 +161,45 @@
             <Border Style="{StaticResource Usuario}" Margin="0,0,-12,0" >
 
                 <Grid Panel.ZIndex="1">
-                    
-                    <Button x:Name="BotonUsuario" Style="{StaticResource BotonUsuario}" Click="BotonUsuario_Click">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Border Style="{StaticResource BorderUsuario}">
+                        <Image></Image>
+                    </Border>
+                    <Border x:Name="Estado" Style="{StaticResource BorderUsuarioEstado}"></Border>
+
+                    <Grid Grid.Column="1">
+
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition Height="34*"/>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="13*"/>
+
+
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0" VerticalAlignment="Top" Margin="10,10,0,0" BorderBrush="#F7F0F0" BorderThickness="0,0,0,1">
+
+                            <TextBlock FontWeight="Bold" Height="20" VerticalAlignment="Top">Usuario</TextBlock>
+
+                        </Border>
+
+                        <TextBlock Grid.Row="1" Margin="10,0,0,0" FontWeight="Light" Grid.RowSpan="2">Estado</TextBlock>
+
+                    </Grid>
+
+                    <Button Grid.Column="2" x:Name="BotonUsuario" Style="{StaticResource BotonUsuario}" Click="BotonUsuario_Click">
                         <Image Source="/Recursos/boton2.png" Stretch="Fill"></Image>
                     </Button>
-                    
+
                 </Grid>
             </Border>
 
@@ -174,7 +233,7 @@
                 </Grid.ColumnDefinitions>
 
                 <WrapPanel Style="{StaticResource Contenido}">
-                    
+
                 </WrapPanel>
 
                 <Grid Grid.Column="1">
@@ -246,7 +305,7 @@
 
             </Grid>
             <Grid Grid.Row="3" Style="{StaticResource GridContent}">
-                
+
                 <Grid.ColumnDefinitions>
 
                     <ColumnDefinition Width="1*"/>
@@ -268,15 +327,15 @@
                 </Grid>
 
                 <Button Style="{StaticResource BotonContenido}">
-                    
+
                     <Image Source="/Recursos/boton3.png"></Image>
-                    
+
                 </Button>
 
 
             </Grid>
             <Grid Grid.Row="4" Style="{StaticResource GridContent}">
-                
+
                 <Grid.ColumnDefinitions>
 
                     <ColumnDefinition Width="1*"/>
@@ -300,9 +359,9 @@
                 </Grid>
 
                 <Button Style="{StaticResource BotonContenido}">
-                    
-                     <Image Source="/Recursos/boton3.png"></Image>
-                    
+
+                    <Image Source="/Recursos/boton3.png"></Image>
+
                 </Button>
 
 

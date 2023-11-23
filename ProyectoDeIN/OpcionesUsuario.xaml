@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoDeIN"
         mc:Ignorable="d"
-        Title="OpcionesUsuario" Height="100" Width="100">
+        Title="OpcionesUsuario" Height="100" Width="100" MouseLeave="Window_MouseLeave">
     <Window.Resources>
 
         <Style x:Key="UsuarioAjustes" TargetType="TextBlock">
@@ -46,7 +46,7 @@
             <TextBlock x:Name="Ajustes" Grid.Row="1" Style="{StaticResource UsuarioAjustes}">Ajustes</TextBlock>
             
         </Button>
-        <Button Grid.Row="2" Style="{StaticResource BotonUsuarioAjustes}">
+        <Button Grid.Row="2" Style="{StaticResource BotonUsuarioAjustes}" Click="CambioEstado_Click">
             
             <TextBlock x:Name="CambioDeEstado" Grid.Row="2" Style="{StaticResource UsuarioAjustes}">Cambiar el Estado</TextBlock>
             

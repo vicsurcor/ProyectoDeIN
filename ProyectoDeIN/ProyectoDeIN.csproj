@@ -58,6 +58,9 @@
     <Compile Include="OpcionesUsuario.xaml.cs">
       <DependentUpon>OpcionesUsuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Perfil.xaml.cs">
+      <DependentUpon>Perfil.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VentanaSocial.xaml.cs">
       <DependentUpon>VentanaSocial.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="OpcionesUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Perfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
