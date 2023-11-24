@@ -173,7 +173,9 @@
                     <Border Style="{StaticResource BorderUsuario}">
                         <Image></Image>
                     </Border>
-                    <Border x:Name="Estado" Style="{StaticResource BorderUsuarioEstado}"></Border>
+                    <Border x:Name="Estado" Style="{StaticResource BorderUsuarioEstado}">
+                        <Button Background="Transparent" Click="CambioEstado_Click"></Button>
+                    </Border>
 
                     <Grid Grid.Column="1">
 
@@ -192,7 +194,7 @@
 
                         </Border>
 
-                        <TextBlock Grid.Row="1" Margin="10,0,0,0" FontWeight="Light" Grid.RowSpan="2">Estado</TextBlock>
+                        <TextBlock Height="20" VerticalAlignment="Center" x:Name="EstadoTexto" Grid.Row="1" Margin="10,0,0,0" FontWeight="Light" Grid.RowSpan="2">Estado</TextBlock>
 
                     </Grid>
 
@@ -219,13 +221,14 @@
 
                 <Border Grid.Row="0" Background="#5F595F" Panel.ZIndex="1" Width="1080" HorizontalAlignment="Right">
 
-                    <Button HorizontalAlignment="Right" BorderThickness="0" Background="#5F595F">
+                    <Button HorizontalAlignment="Right" BorderThickness="0" Background="#5F595F" Click="VolverMenuPrincipal_Click">
                         <Image Height="39" Source="/Recursos/BackNegro.png"/>
                     </Button>
 
                 </Border>
 
-                <MediaElement Grid.Row="1" Source="/recursos/VideoGif.gif" Stretch="Uniform" Volume="40"/>
+                <Image Grid.Row="1" Source="/Recursos/VideoGif.gif" />
+
 
             </Grid>
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoDeIN"
         mc:Ignorable="d"
-        Title="VentanaSocial" Height="618" Width="248" MouseLeave="WindowSocial_MouseLeave">
+        Title="VentanaSocial" Height="618" Width="248">
 
     <Window.Resources>
 
@@ -130,7 +130,7 @@
 
                 </Grid>
 
-                <Button Style="{StaticResource BotonContenido}">
+                <Button x:Name="BotonSocial" Style="{StaticResource BotonContenido}" Click="BotonSocial_Click">
 
                     <Image Source="/Recursos/boton3.png"></Image>
 

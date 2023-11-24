@@ -1,11 +1,11 @@
-﻿<Window x:Class="ProyectoDeIN.OpcionesUsuario"
+﻿<Window x:Class="ProyectoDeIN.OpcionesSocial"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoDeIN"
         mc:Ignorable="d"
-        Title="OpcionesUsuario" Height="100" Width="100" MouseLeave="Window_MouseLeave">
+        Title="OpcionesSocial" Height="100" Width="100" MouseLeave="Window_MouseLeave">
     <Window.Resources>
 
         <Style x:Key="UsuarioAjustes" TargetType="TextBlock">
@@ -24,7 +24,7 @@
             <Setter Property="Background" Value="#F7F0F0"/>
 
         </Style>
-        
+
     </Window.Resources>
     <Grid>
 
@@ -32,21 +32,20 @@
 
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            
+
 
         </Grid.RowDefinitions>
 
         <Button Grid.Row="0" Style="{StaticResource BotonUsuarioAjustes}" Click="Perfil_Click">
 
             <TextBlock x:Name="Perfil" Style="{StaticResource UsuarioAjustes}">Perfil</TextBlock>
-         
+
         </Button>
-        <Button Grid.Row="1" Style="{StaticResource BotonUsuarioAjustes}" Click="Ajustes_Click">
-            
-            <TextBlock x:Name="Ajustes" Grid.Row="1" Style="{StaticResource UsuarioAjustes}">Ajustes</TextBlock>
-            
+        <Button Grid.Row="1" Style="{StaticResource BotonUsuarioAjustes}" Click="Chat_Click">
+
+            <TextBlock x:Name="Chat" Grid.Row="1" Style="{StaticResource UsuarioAjustes}">Chat</TextBlock>
+
         </Button>
-        
+
     </Grid>
-    
 </Window>

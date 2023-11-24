@@ -55,17 +55,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ajustes.xaml.cs">
+      <DependentUpon>Ajustes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Chat.xaml.cs">
       <DependentUpon>Chat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas.xaml.cs">
+      <DependentUpon>Estadisticas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Juegos y Apps.xaml.cs">
+      <DependentUpon>Juegos y Apps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OpcionesSocial.xaml.cs">
+      <DependentUpon>OpcionesSocial.xaml</DependentUpon>
     </Compile>
     <Compile Include="OpcionesUsuario.xaml.cs">
       <DependentUpon>OpcionesUsuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PerfilAmigo.xaml.cs">
+      <DependentUpon>PerfilAmigo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Perfil_Estadisticas.xaml.cs">
       <DependentUpon>Perfil_Estadisticas.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Perfil_JuegosApp.xaml.cs">
-      <DependentUpon>Perfil_JuegosApp.xaml</DependentUpon>
     </Compile>
     <Compile Include="Reproductor.xaml.cs">
       <DependentUpon>Reproductor.xaml</DependentUpon>
@@ -73,7 +85,19 @@
     <Compile Include="VentanaSocial.xaml.cs">
       <DependentUpon>VentanaSocial.xaml</DependentUpon>
     </Compile>
+    <Page Include="Ajustes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Chat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Estadisticas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Juegos y Apps.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -89,15 +113,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="OpcionesSocial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OpcionesUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Perfil_Estadisticas.xaml">
+    <Page Include="PerfilAmigo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Perfil_JuegosApp.xaml">
+    <Page Include="Perfil_Estadisticas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,7 +198,22 @@
     <Resource Include="Recursos\Juegos Usuario.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Recursos\Video.mp4" />
+    <Resource Include="Recursos\VideoGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\boton4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\boton5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\boton6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\VideoCaptura.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

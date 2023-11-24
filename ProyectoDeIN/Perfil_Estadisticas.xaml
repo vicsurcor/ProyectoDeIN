@@ -96,7 +96,9 @@
                     <Border Style="{StaticResource BorderUsuario}">
                         <Image></Image>
                     </Border>
-                    <Border x:Name="Estado" Style="{StaticResource BorderUsuarioEstado}"></Border>
+                    <Border x:Name="Estado" Style="{StaticResource BorderUsuarioEstado}">
+                        <Button Background="Transparent" Click="CambioEstado_Click"></Button>
+                    </Border>
 
                     <Grid Grid.Column="1">
 
@@ -115,7 +117,7 @@
 
                         </Border>
 
-                        <TextBlock Grid.Row="1" Margin="10,0,0,0" FontWeight="Light" Grid.RowSpan="2">Estado</TextBlock>
+                        <TextBlock Height="20" VerticalAlignment="Top" x:Name="EstadoTexto" Grid.Row="1" Margin="10,0,0,0" FontWeight="Light" Grid.RowSpan="2">Estado</TextBlock>
 
                     </Grid>
 
@@ -355,7 +357,7 @@
 
             <Border Grid.Row="3" Background="#5F595F">
 
-                <Button HorizontalAlignment="Left" BorderThickness="0" Background="#5F595F">
+                <Button HorizontalAlignment="Left" BorderThickness="0" Background="#5F595F" Click="VolverMenuPrincipal_Click">
                     <Image Height="59" Source="/Recursos/BackNegro.png"/>
                 </Button>
                 
@@ -381,39 +383,21 @@
 
                 </Grid.ColumnDefinitions>
 
-                <Button IsEnabled="False">
+                <Button x:Name="PerfilEstadisticas" IsEnabled="False" Click="CambioEstadisticas_Click">
 
                     <TextBlock FontSize="15" VerticalAlignment="Center" FontStyle="Italic">Estadisticas</TextBlock>
                     
                 </Button>
-                <Button Grid.Column="1">
+                <Button x:Name="PerfilJuegos" Grid.Column="1" Click="CambioJuegos_Click">
 
                     <TextBlock FontSize="14" VerticalAlignment="Center" FontStyle="Italic">Juegos y Aplicaciones</TextBlock>
 
                 </Button>
                 
             </Grid>
-               
-
-            <Border Background="#5F595F" Grid.Row="1">
-
-                <Grid>
-
-                    <Grid.ColumnDefinitions>
-
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-
-                    </Grid.ColumnDefinitions>
-
-                    <Image Grid.Column="0" Source="/Recursos/Stats-1 Usuario.png" Stretch="UniformToFill" ScrollViewer.CanContentScroll="True"/>
-                    
-                    <Image Grid.Column="1" Stretch="UniformToFill" Source="/Recursos/Stats-2 Usuario.png" ScrollViewer.CanContentScroll="True"/>
 
 
-                </Grid>
-
-            </Border>
+            <Frame x:Name="Pagina" Grid.Row="1" Source="/estadisticas.xaml"></Frame>
             
         </Grid>
 

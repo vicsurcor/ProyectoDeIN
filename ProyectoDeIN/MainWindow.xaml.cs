@@ -20,10 +20,18 @@ namespace ProyectoDeIN
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Brush brush1;
         public MainWindow()
         {
             InitializeComponent();
+            Color color = Color.FromRgb(49, 248, 45);
+            Brush brush = new SolidColorBrush(color);
+            brush1 = brush;
+            Estado.Background = brush;
+            EstadoTexto.Text = "Conectado";
+
         }
+
 
         private void BotonSocial_Click(object sender, RoutedEventArgs e)
         {
@@ -42,6 +50,40 @@ namespace ProyectoDeIN
             opciones.Left = point.X - 80;
             opciones.Top = point.Y - 60;
             opciones.Show();
+        }
+
+        private void CambioEstado_Click(object sender, RoutedEventArgs e)
+        {
+
+            Brush color = Estado.Background;
+            if (color == brush1)
+            {
+                Estado.Background = Brushes.Yellow;
+                EstadoTexto.Text = "Ausente";
+            }
+            else if (color == Brushes.Yellow)
+            {
+                Estado.Background = Brushes.Red;
+                EstadoTexto.FontSize = 9.5;
+                EstadoTexto.Margin = new Thickness(10,5,0,0);
+                EstadoTexto.Text = "Apareciendo Desconectado";
+            }
+            else
+            {
+                Estado.Background = brush1;
+                EstadoTexto.FontSize = 12;
+                EstadoTexto.Margin = new Thickness(10, 0, 0, 0);
+                EstadoTexto.Text = "Conectado";
+            }
+            
+
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Window window = new Reproductor();
+            this.Close();
+            window.Show();
         }
     }
 }

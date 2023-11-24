@@ -24,17 +24,21 @@ namespace ProyectoDeIN
             InitializeComponent();
         }
 
-        private void WindowSocial_MouseLeave(object sender, MouseEventArgs e)
-        {
-            this.Close();
-        }
-
         private void CambioTexto_Social(object sender, TextChangedEventArgs e)
         {
             TextBox textBox = sender as TextBox;
            
             textBox.Foreground = Brushes.Gray;
             
+        }
+
+        private void BotonSocial_Click(object sender, RoutedEventArgs e)
+        {
+            OpcionesSocial opciones = new OpcionesSocial();
+            Point point = BotonSocial.PointToScreen(new Point(0, 0));
+            opciones.Left = point.X - 80;
+            opciones.Top = point.Y - 60;
+            opciones.Show();
         }
     }
 }

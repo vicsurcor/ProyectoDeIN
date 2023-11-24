@@ -15,51 +15,44 @@ using System.Windows.Shapes;
 namespace ProyectoDeIN
 {
     /// <summary>
-    /// Lógica de interacción para OpcionesUsuario.xaml
+    /// Lógica de interacción para OpcionesSocial.xaml
     /// </summary>
-    public partial class OpcionesUsuario : Window
+    public partial class OpcionesSocial : Window
     {
-        public OpcionesUsuario()
+        public OpcionesSocial()
         {
             InitializeComponent();
         }
 
-        
-
-        private void Window_MouseLeave(object sender, MouseEventArgs e)
+        private void Chat_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Window chat = new Chat();
+            chat.Show();
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window != chat)
+                {
+                    window.Close();
+                }
+            }
         }
 
         private void Perfil_Click(object sender, RoutedEventArgs e)
         {
-
-            Perfil_Estadisticas perfil = new Perfil_Estadisticas();
-            perfil.Show();
+            Window perfilAmigo = new PerfilAmigo();
+            perfilAmigo.Show();
             foreach (Window window in Application.Current.Windows)
             {
-                if (window != perfil)
+                if (window != perfilAmigo)
                 {
                     window.Close();
                 }
-                
             }
-            
-
         }
 
-        private void Ajustes_Click(object sender, RoutedEventArgs e)
+        private void Window_MouseLeave(object sender, MouseEventArgs e)
         {
-            Ajustes ajustes = new Ajustes();
-            ajustes.Show();
-            foreach (Window window in Application.Current.Windows)
-            {
-                if (window != ajustes)
-                {
-                    window.Close();
-                }
-            }
-            
+            this.Close();
         }
     }
 }

@@ -1,11 +1,11 @@
-﻿<Window x:Class="ProyectoDeIN.Perfil_JuegosApp"
+﻿<Window x:Class="ProyectoDeIN.PerfilAmigo"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoDeIN"
         mc:Ignorable="d"
-        Title="Perfil_JuegosApp" Height="720" Width="1080">
+        Title="PerfilAmigo" Height="720" Width="1080">
     <Window.Resources>
 
         <Style x:Key="BorderUsuario" TargetType="Border">
@@ -95,7 +95,8 @@
                     <Border Style="{StaticResource BorderUsuario}">
                         <Image></Image>
                     </Border>
-                    <Border x:Name="Estado" Style="{StaticResource BorderUsuarioEstado}"></Border>
+                    <Border x:Name="Estado" Style="{StaticResource BorderUsuarioEstado}">
+                    </Border>
 
                     <Grid Grid.Column="1">
 
@@ -114,7 +115,7 @@
 
                         </Border>
 
-                        <TextBlock Grid.Row="1" Margin="10,0,0,0" FontWeight="Light" Grid.RowSpan="2">Estado</TextBlock>
+                        <TextBlock Height="20" VerticalAlignment="Top" x:Name="EstadoTexto" Grid.Row="1" Margin="10,0,0,0" FontWeight="Light" Grid.RowSpan="2">Estado</TextBlock>
 
                     </Grid>
 
@@ -354,7 +355,7 @@
 
             <Border Grid.Row="3" Background="#5F595F">
 
-                <Button HorizontalAlignment="Left" BorderThickness="0" Background="#5F595F">
+                <Button HorizontalAlignment="Left" BorderThickness="0" Background="#5F595F" Click="VolverMenuPrincipal_Click">
                     <Image Height="59" Source="/Recursos/BackNegro.png"/>
                 </Button>
 
@@ -380,12 +381,12 @@
 
                 </Grid.ColumnDefinitions>
 
-                <Button>
+                <Button x:Name="PerfilEstadisticas" IsEnabled="False" Click="CambioEstadisticas_Click">
 
                     <TextBlock FontSize="15" VerticalAlignment="Center" FontStyle="Italic">Estadisticas</TextBlock>
 
                 </Button>
-                <Button Grid.Column="1" IsEnabled="False">
+                <Button x:Name="PerfilJuegos" Grid.Column="1" Click="CambioJuegos_Click">
 
                     <TextBlock FontSize="14" VerticalAlignment="Center" FontStyle="Italic">Juegos y Aplicaciones</TextBlock>
 
@@ -394,32 +395,12 @@
             </Grid>
 
 
-            <Border Background="#5F595F" Grid.Row="1">
-
-                <Grid>
-
-                    <Grid.ColumnDefinitions>
-
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-
-                    </Grid.ColumnDefinitions>
-
-                    <Image Grid.Column="0" Source="/Recursos/Juegos Usuario.png"  Width="420" Stretch="Fill" ScrollViewer.CanContentScroll="True"/>
-
-
-                    <Image Grid.Column="1" Source="/Recursos/Juegos Usuario.png"  Width="420" Stretch="Fill" ScrollViewer.CanContentScroll="True"/>
-
-
-                </Grid>
-
-            </Border>
+            <Frame x:Name="Pagina" Grid.Row="1" ></Frame>
 
         </Grid>
 
 
 
     </Grid>
-    
     
 </Window>

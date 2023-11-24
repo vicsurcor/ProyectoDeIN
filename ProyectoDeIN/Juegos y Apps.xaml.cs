@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProyectoDeIN
 {
     /// <summary>
-    /// Lógica de interacción para Perfil_JuegosApp.xaml
+    /// Lógica de interacción para Juegos_y_Apps.xaml
     /// </summary>
-    public partial class Perfil_JuegosApp : Window
+    public partial class Juegos_y_Apps : Page
     {
-        public Perfil_JuegosApp()
+        public Juegos_y_Apps()
         {
             InitializeComponent();
         }

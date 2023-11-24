@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoDeIN"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1080" BorderBrush="#066" x:Name="Principal">
+        Title="ProyectoDeVictorSuros" Height="720" Width="1080" BorderBrush="#066" x:Name="Principal">
 
     <Window.Resources>
 
@@ -119,12 +119,42 @@
             <Setter Property="Margin" Value="40,40,0,0" />
             <Setter Property="BorderThickness" Value="2" />
             <Setter Property="BorderBrush" Value="Black" />
-            <Setter Property="Background" Value="#31F82D" />
+            
             <Setter Property="CornerRadius" Value="100" />
             <Setter Property="Grid.Column" Value="0" />
 
 
         </Style>
+        <Style x:Key="GridSocial" TargetType="Grid">
+
+            <Setter Property="Background" Value="AntiqueWhite"/>
+            <Setter Property="Margin" Value="0,0,2,0"/>
+            <Setter Property="Width" Value="236"/>
+            <Setter Property="Panel.ZIndex" Value="-1"/>
+
+
+        </Style>
+        <Style x:Key="BorderNombreUsuario" TargetType="Border">
+
+            <Setter Property="Grid.Row" Value="0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="10,10,0,0"/>
+            <Setter Property="BorderBrush" Value="#F7F0F0"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+
+        </Style>
+        <Style x:Key="TextBlockEstado" TargetType="TextBlock">
+
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Grid.Row" Value="1"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+            <Setter Property="FontWeight" Value="Light"/>
+            <Setter Property="Grid.RowSpan" Value="2"/>
+
+
+        </Style>
+        
 
     </Window.Resources>
 
@@ -148,7 +178,7 @@
 
 
 
-        <Grid x:Name="BackgroundGrid" Background="AntiqueWhite" Margin="0,0,2,0" Width="236" Panel.ZIndex="-1">
+        <Grid x:Name="BackgroundGrid" Style="{StaticResource GridSocial}">
 
             <Button x:Name="BotonSocial" Style="{StaticResource BotonSocial}" Click="BotonSocial_Click">
                 <Image Source="/Recursos/boton1.png"></Image>
@@ -174,7 +204,10 @@
                     <Border Style="{StaticResource BorderUsuario}">
                         <Image></Image>
                     </Border>
-                    <Border x:Name="Estado" Style="{StaticResource BorderUsuarioEstado}"></Border>
+
+                    <Border x:Name="Estado" Style="{StaticResource BorderUsuarioEstado}">
+                        <Button Background="Transparent" Click="CambioEstado_Click"></Button>
+                    </Border>
 
                     <Grid Grid.Column="1">
 
@@ -187,13 +220,13 @@
 
                         </Grid.RowDefinitions>
 
-                        <Border Grid.Row="0" VerticalAlignment="Top" Margin="10,10,0,0" BorderBrush="#F7F0F0" BorderThickness="0,0,0,1">
+                        <Border Style="{StaticResource BorderNombreUsuario}">
 
                             <TextBlock FontWeight="Bold" Height="20" VerticalAlignment="Top">Usuario</TextBlock>
 
                         </Border>
 
-                        <TextBlock Grid.Row="1" Margin="10,0,0,0" FontWeight="Light" Grid.RowSpan="2">Estado</TextBlock>
+                        <TextBlock x:Name="EstadoTexto" Style="{StaticResource TextBlockEstado}">Estado</TextBlock>
 
                     </Grid>
 
@@ -235,6 +268,9 @@
 
                 <WrapPanel Style="{StaticResource Contenido}">
 
+                    <Image Stretch="Fill" Source="/Recursos/VideoCaptura.png" MouseDown="Image_MouseDown"/>
+
+                    
                 </WrapPanel>
 
                 <Grid Grid.Column="1">
