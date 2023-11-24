@@ -55,15 +55,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Chat.xaml.cs">
+      <DependentUpon>Chat.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OpcionesUsuario.xaml.cs">
       <DependentUpon>OpcionesUsuario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Perfil_Estadisticas.xaml.cs">
       <DependentUpon>Perfil_Estadisticas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Perfil_JuegosApp.xaml.cs">
+      <DependentUpon>Perfil_JuegosApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reproductor.xaml.cs">
+      <DependentUpon>Reproductor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VentanaSocial.xaml.cs">
       <DependentUpon>VentanaSocial.xaml</DependentUpon>
     </Compile>
+    <Page Include="Chat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -81,6 +94,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Perfil_Estadisticas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Perfil_JuegosApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reproductor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,6 +165,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\Stats-2 Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Juegos Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Recursos\Video.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
