@@ -58,8 +58,8 @@
     <Compile Include="OpcionesUsuario.xaml.cs">
       <DependentUpon>OpcionesUsuario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Perfil.xaml.cs">
-      <DependentUpon>Perfil.xaml</DependentUpon>
+    <Compile Include="Perfil_Estadisticas.xaml.cs">
+      <DependentUpon>Perfil_Estadisticas.xaml</DependentUpon>
     </Compile>
     <Compile Include="VentanaSocial.xaml.cs">
       <DependentUpon>VentanaSocial.xaml</DependentUpon>
@@ -80,7 +80,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Perfil.xaml">
+    <Page Include="Perfil_Estadisticas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,6 +126,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recursos\busqueda1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Juego.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\App.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\BackNegro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Stats-1 Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Stats-2 Usuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

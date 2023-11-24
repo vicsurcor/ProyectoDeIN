@@ -17,9 +17,9 @@ namespace ProyectoDeIN
     /// <summary>
     /// Lógica de interacción para Perfil.xaml
     /// </summary>
-    public partial class Perfil : Window
+    public partial class Perfil_Estadisticas : Window
     {
-        public Perfil()
+        public Perfil_Estadisticas()
         {
             InitializeComponent();
         }

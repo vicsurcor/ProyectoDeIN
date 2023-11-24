@@ -31,7 +31,7 @@
         <Style x:Key="Usuario" TargetType="Border">
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="BorderBrush" Value="Black"/>
-            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="Background" Value="#5F595F"/>
             <Setter Property="CornerRadius" Value="0,20,20,0"/>
 
         </Style>
@@ -101,6 +101,7 @@
         </Style>
         <Style x:Key="BorderUsuario" TargetType="Border">
 
+            <Setter Property="Margin" Value="7,0,0,0"/>
             <Setter Property="Height" Value="60" />
             <Setter Property="Width" Value="60" />
             <Setter Property="BorderThickness" Value="2" />
@@ -147,7 +148,7 @@
 
 
 
-        <Grid x:Name="BackgroundGrid" Background="AntiqueWhite" Margin="0,0,2,0" HorizontalAlignment="Right" Width="236">
+        <Grid x:Name="BackgroundGrid" Background="AntiqueWhite" Margin="0,0,2,0" Width="236" Panel.ZIndex="-1">
 
             <Button x:Name="BotonSocial" Style="{StaticResource BotonSocial}" Click="BotonSocial_Click">
                 <Image Source="/Recursos/boton1.png"></Image>
